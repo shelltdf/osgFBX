@@ -215,6 +215,7 @@ osg::StateSet* LoadMaterialAttribute( FbxSurfaceMaterial* pSurfaceMaterial /*, s
 
     osg::StateSet* ss = new osg::StateSet();
     ss->setAttributeAndModes(mat);
+    ss->setName(pSurfaceMaterial->GetName());
 
     //如果有透明设置
     if (diffuse[3] < 1.0)
